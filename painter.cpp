@@ -97,14 +97,13 @@ void Painter::clearWithBgColor(SDL_Color bgColor)
 }
 
 
-Painter::Painter(SDL_Window* window, SDL_Renderer* renderer_)
-    
+Painter::Painter(SDL_Window* window, SDL_Renderer* renderer)
 {
-    renderer = renderer_;
     SDL_RenderGetLogicalSize(renderer, &width, &height);
-    if (width == 0 && height == 0)
+    if (width == 0 && height == 0) {
         SDL_GetWindowSize(window, &width, &height);
-
+    }
+    this->renderer = renderer;
     setPosition(width / 2, height / 2);
     setAngle(0);
     setColor(WHITE_COLOR);
@@ -115,8 +114,8 @@ Painter::Painter(SDL_Window* window, SDL_Renderer* renderer_)
 void Painter::createCircle(int radius)
 {
     double rad = (angle / 180) * M_PI;
-    int centerX = x + cos(rad) * radius;
-    int centerY = y - sin(rad) * radius;
+    int centerX = x + (int)(cos(rad) * (double)radius);;
+    int centerY = y - (int)(sin(rad) * (double)radius);;
 
     int dx = radius;
     int dy = 0;
