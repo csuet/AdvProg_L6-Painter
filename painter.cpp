@@ -10,7 +10,7 @@ void Painter::setColor(SDL_Color color)
 {
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
-    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 0);
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 255);
 }
 
 
@@ -114,8 +114,8 @@ Painter::Painter(SDL_Window* window, SDL_Renderer* renderer)
 void Painter::createCircle(int radius)
 {
     double rad = (angle / 180) * M_PI;
-    int centerX = x + (int)(cos(rad) * (double)radius);;
-    int centerY = y - (int)(sin(rad) * (double)radius);;
+    int centerX = x + (int)(cos(rad) * radius);
+    int centerY = y - (int)(sin(rad) * radius);
 
     int dx = radius;
     int dy = 0;
