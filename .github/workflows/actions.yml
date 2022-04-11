@@ -1,10 +1,11 @@
 name: Painter CI
 
 on:
-  pull_request:
+  pull_request_target:
     branches: [ main ]
     paths-ignore:
       - '.github/workflows/**'
+      - '**/painterTest.cpp'
 jobs:
   simpleAI_job:
     runs-on: ubuntu-latest
