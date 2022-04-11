@@ -1,5 +1,6 @@
 #include "painter.h"
-
+Painter::Painter(SDL_Window* window, SDL_Renderer* renderer_)
+ : renderer(renderer_)
 /***
     Args: color (SDL_Color): color value 
         
@@ -8,6 +9,9 @@
 ***/
 void Painter::setColor(SDL_Color color) 
 { 
+	  this->color = color;
+ SDL_SetRenderDrawColor(
+ renderer, color.r, color.g, color.b, 0);
     // TODO: set the color value for the Painter and set Render Draw Color
 }
 
@@ -20,6 +24,9 @@ void Painter::setColor(SDL_Color color)
 ***/
 void Painter::jumpForward(int numPixel)
 {
+	 float rad = (angle / 180) * M_PI;
+ x += cos(rad) *  numPixel;
+ y -= sin(rad) *  numPixel;
     // TODO: jump the painter forward
 }
 
@@ -32,6 +39,7 @@ void Painter::jumpForward(int numPixel)
 ***/
 void Painter::jumpBackward(int numPixel)
 {
+	moveForward(-numPixel); 
     // TODO: jump the painter backward
 }
 
@@ -44,6 +52,7 @@ void Painter::jumpBackward(int numPixel)
 ***/       
 void Painter::turnLeft(double degree)
 {
+	setAngle(this->degree +degree); 
     // TODO: rotate left the painter   
 }
 
@@ -56,6 +65,7 @@ void Painter::turnLeft(double degree)
 ***/     
 void Painter::turnRight(double degree)
 {
+	turnLeft(-degree); 
     // TODO: rotate right the painter   
 }
 
@@ -67,6 +77,12 @@ void Painter::turnRight(double degree)
 ***/
 void Painter::randomColor()
 {
+	Uint8 r = rand() % 256;
+ Uint8 g = rand() % 256;
+ Uint8 b = rand() % 256;
+ SDL_Color color = { r, g, b };
+ setColor(color);
+
     // TODO: set random color    
 }
 
