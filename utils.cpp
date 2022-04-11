@@ -1,4 +1,5 @@
 #include "utils.h"
+#include "SDL.h"
 
 SDL_Color dict2SDL_Color(int r, int g, int b) {
 	SDL_Color color;
@@ -8,7 +9,7 @@ SDL_Color dict2SDL_Color(int r, int g, int b) {
 	return color;
 }
 
-bool validColorValue(int value) { 
+bool validColorValue(int value) {
 	if (value >=0 && value <= 255) return true;
 	else return false;
 }
