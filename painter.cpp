@@ -1,73 +1,76 @@
 #include "painter.h"
 
 /***
-    Args: color (SDL_Color): color value 
-        
+    Args: color (SDL_Color): color value
+
     Returns:
         None
 ***/
-void Painter::setColor(SDL_Color color) 
-{ 
-    // TODO: set the color value for the Painter and set Render Draw Color
+void Painter::setColor(SDL_Color color)
+{
+    this->color = color;
 }
 
 
 /***
     Args: numPixel (int): number of pixel for jumping forward
-        
+
     Returns:
         None
 ***/
 void Painter::jumpForward(int numPixel)
 {
-    // TODO: jump the painter forward
+    this->x += numPixel * cos(this->angle);
+    this->y += numPixel * sin(this->angle);
 }
 
 
 /***
     Args: numPixel (int): number of pixel for jumping backward
-        
+
     Returns:
         None
 ***/
 void Painter::jumpBackward(int numPixel)
 {
-    // TODO: jump the painter backward
+    this->jumpForward(-numPixel);
 }
 
 
 /***
     Args: degree (double): the value of rotation angle
-        
+
     Returns:
         None
-***/       
+***/
 void Painter::turnLeft(double degree)
 {
-    // TODO: rotate left the painter   
+    this->angle -= degree * M_PI / 180;
 }
 
 
 /***
     Args: degree (double): the value of rotation angle
-        
+
     Returns:
         None
-***/     
+***/
 void Painter::turnRight(double degree)
 {
-    // TODO: rotate right the painter   
+    this->turnLeft(-degree);
 }
 
-/***  
-    Args: 
+/***
+    Args:
         None
     Returns:
         None
 ***/
 void Painter::randomColor()
 {
-    // TODO: set random color    
+    this->color.r = rand();
+    this->color.g = rand();
+    this->color.b = rand();
 }
 
 
@@ -78,7 +81,7 @@ void Painter::clearWithBgColor(SDL_Color bgColor)
 {
     SDL_Color curColor = color;
     setColor(bgColor);
-	SDL_RenderClear(renderer);    
+    SDL_RenderClear(renderer);
     setColor(curColor);
 }
 
@@ -86,7 +89,8 @@ void Painter::clearWithBgColor(SDL_Color bgColor)
 Painter::Painter(SDL_Window* window, SDL_Renderer *renderer)
 {
     SDL_RenderGetLogicalSize(renderer, &width, &height);
-    if (width == 0 && height == 0) {
+    if (width == 0 && height == 0)
+    {
         SDL_GetWindowSize(window, &width, &height);
     }
     this->renderer = renderer;
@@ -135,21 +139,23 @@ void Painter::createCircle(int radius)
 
 void Painter::createParallelogram(int size)
 {
-	for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 2; ++i)
+    {
         moveForward(size);
         turnLeft(60);
         moveForward(size);
         turnLeft(120);
-    }	
+    }
 }
 
 
 
 void Painter::createSquare(int size)
 {
-	for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < 4; ++i)
+    {
         moveForward(size);
-	    turnLeft(90);
+        turnLeft(90);
     }
 }
 
@@ -166,4 +172,3 @@ void Painter::moveBackward(int numPixel)
 {
     moveForward(-numPixel);
 }
-
