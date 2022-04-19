@@ -72,7 +72,7 @@ void Painter::turnRight(double degree)
 ***/
 void Painter::randomColor()
 {
-    SDL_Color colorr;
+    SDL_Color colorr ;
     this->setColor(colorr);
     // TODO: set random color    
 }
