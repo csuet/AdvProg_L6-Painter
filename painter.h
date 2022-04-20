@@ -4,7 +4,7 @@
 #include <cmath>
 #include <cstdlib>
 
-//Mac'=
+//Mac
 #ifdef __APPLE__
 #include <SDL2/SDL.h>
 #endif // __APPLE__

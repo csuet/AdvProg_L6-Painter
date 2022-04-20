@@ -2,7 +2,14 @@
 #define UTILS_H
 
 #include <iostream>
+//Mac
+#ifdef __APPLE__
 #include <SDL2/SDL.h>
+#endif // __APPLE__
+//Windows
+#ifdef _WIN32
+#include <SDL.h>
+#endif // _WIN32
 
 const int SCREEN_WIDTH  = 800;
 const int SCREEN_HEIGHT = 600;
