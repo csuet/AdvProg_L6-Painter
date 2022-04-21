@@ -1,5 +1,6 @@
 LIBFLAGS = -lSDL2 -lSDL2_image
 all:
+	g++ -Isrc/Include -Lsrc/lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2
 	g++ -std=c++17 -c utils.cpp $(LIBFLAGS)
 	g++ -std=c++17 -c painter.cpp $(LIBFLAGS)
 	g++ -std=c++17 -c main.cpp $(LIBFLAGS)
