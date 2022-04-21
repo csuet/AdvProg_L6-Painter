@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Thu Apr 21 22:17:46 2022
+# Make data base, printed on Thu Apr 21 22:41:48 2022
 
 # Variables
 
@@ -100,7 +100,8 @@ USERNAME = Admin
 # environment
 PUBLIC = C:\Users\Public
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHos 
+tProcess
 # environment
 VSCODE_CODE_CACHE_PATH = C:\Users\Admin\AppData\Roaming\Code\CachedData\dfd34e8260c270da74b5c2d86d61aee4b6d56977
 # environment
@@ -140,8 +141,7 @@ PROCESSOR_ARCHITEW6432 = AMD64
 # automatic
 *F = $(notdir $*)
 # environment
-P 
-ROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # environment
 OS = Windows_NT
 # environment
@@ -161,7 +161,8 @@ REGIONCODE = APJ
 # environment
 SYSTEMROOT = C:\windows
 # automatic
-+D = $(patsubst %/,%,$(dir $+))
++D = $(patsubst %/,%, 
+$(dir $+))
 # environment
 PLATFORMCODE = KV
 # automatic
@@ -202,7 +203,7 @@ VSCODE_PID = 25132
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-TQI48H9D
 # variable set hash-table stats:
-# Load=93/1024=9%, Rehash=0, Collisions=9/121=7%
+# Load=93/1024=9%, Rehash=0, Collisions=9/123=7%
 
 # Pattern-specific Variable Values
 
@@ -216,13 +217,14 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-TQI48H9D
 # C:\windows\System32\WindowsPowerShell\v1.0\ (key C:/windows/System32/WindowsPowerShell/v1.0/, mtime 1622898672): 30 files, no impossibilities.
 # C:\windows\System32\Wbem (key C:/windows/System32/Wbem, mtime 1646114699): 154 files, no impossibilities.
 # . (key f:/devc++/AdvProg_L6-Painter, mtime 165 
-0553056): 16 files, no impossibilities.
+0555615): 16 files, no impossibilities.
 # C:\MinGW\bin (key C:/MinGW/bin, mtime 1647690132): 147 files, no impossibilities.
 # C:\windows\System32\OpenSSH\: could not be stat'd.
 # F:\download\Microsoft VS Code\bin (key F:/download/Microsoft VS Code/bin, mtime 1649849679): 4 files, no impossibilities.
 # C:\windows (key C:/windows, mtime 1649940757): 129 files, no impossibilities.
 # F:\devc++\Git\cmd (key F:/devc++/Git/cmd, mtime 1645897568): 8 files, no impossibilities.
-# C:\windows\system32 (key C:/windows/system32, mtime 1650037418): 2894 files, no impossibilities.
+# C:\windows\system32 (key C:/windows/s 
+ystem32, mtime 1650037418): 2894 files, no impossibilities.
 # C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1647690271): 5 files, no impossibilities.
 
 # 3416 files, no impossibilities in 13 directories.
@@ -242,7 +244,8 @@ all:
 #  Needs to be updated (-q is set).
 # automatic
 # @ := all
-# automatic
+# au 
+tomatic
 # % := 
 # automatic
 # * := 
@@ -257,16 +260,16 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+# Load=8/32=25%, Rehash=0, Collisions=1/18=6%
 #  commands to execute (from `makefile', line 3):
-	g++ -Isrc/Include -Lsrc/lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2
 	g++ -std=c++17 -c utils.cpp $(LIBFLAGS)
 	g++ -std=c++17 -c painter.cpp $(LIBFLAGS)
 	g++ -std=c++17 -c main.cpp $(LIBFLAGS)
-	g++ -std=c++17 utils.o  painter.o main.o -o main 
- $(LIBFLAGS)
+	g++ -std=c++17 utils.o  painter.o main.o -o main $(LIBFLAGS)
 	g++ -std=c++17 -c painterTest.cpp $(LIBFLAGS)
-	g++ -std=c++17 utils.o  painter.o painterTest.o  -lcppunit -o painterTest $(LIBFLAGS)
+	g++ -std=c++1 
+7 utils.o  painter.o painterTest.o  -lcppunit -o painterTest $(LIBFLAGS)
+	g++ -Isrc/Include -Lsrc/lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2
 	
 
 # Not a target:
@@ -279,15 +282,16 @@ test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 15):
+#  commands to execute (from `makefile', line 16):
 	chmod +x guessitTest
 	./guessitTest
 	
 
 # Not a target:
-makefile:
+make 
+file:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-21 22:08:08
+#  Last modified 2022-04-21 22:41:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -303,7 +307,7 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 11):
+#  commands to execute (from `makefile', line 12):
 	chmod +x main
 	./main
 	
@@ -312,7 +316,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `makefile', line 19):
+#  commands to execute (from `makefile', line 20):
 	rm -rf *.o main painterTest
 	
 
@@ -330,6 +334,6 @@ clean:
 g = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Apr 21 22:17:46 2022
+# Finished Make data base on Thu Apr 21 22:41:48 2022
 
  
