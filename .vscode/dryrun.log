@@ -1,10 +1,12 @@
-make.exe --dry-run --always-make --keep-going --print-directory
+make.exe --dry-run --keep-going --print-directory
 make.exe: Entering directory `f:/devc++/AdvProg_L6-Painter'
+g++ -Isrc/Include -Lsrc/lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2
 g++ -std=c++17 -c utils.cpp -lSDL2 -lSDL2_image
 g++ -std=c++17 -c painter.cpp -lSDL2 -lSDL2_image
 g++ -std=c++17 -c main.cpp -lSDL2 -lSDL2_image
 g++ -std=c++17 utils.o  painter.o main.o -o main -lSDL2 -lSDL2_image
 g++ -std=c++17 -c painterTest.cpp -lSDL2 -lSDL2_image
 g++ -std=c++17 utils.o  painter.o painterTest.o  -lcppunit -o painterTest -lSDL2 -lSDL2_image
+ 
 make.exe: Leaving directory `f:/devc++/AdvProg_L6-Painter'
  
