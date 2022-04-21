@@ -25,9 +25,9 @@ void Painter::jumpForward(int numPixel)
 {
     // TODO: jump the painter forward
 
-    float rad = (angle/180)*M_PI;
-    x += cos(rad)*numPixel;
-    y -= sin(rad)*numPixel;
+    //float rad = (angle/180)*M_PI;
+    x += cos(this->angle)*numPixel;
+    y += sin(this->angle)*numPixel;
 }
 
 
@@ -52,8 +52,8 @@ void Painter::jumpBackward(int numPixel)
 ***/       
 void Painter::turnLeft(double degree)
 {
-    double angle_ = degree*M_1_PI/180;
-    setAngle(this->angle + angle_);
+    double angle_ = degree*M_PI/180;
+    setAngle(this->angle - angle_);
     // TODO: rotate left the painter   
 }
 
