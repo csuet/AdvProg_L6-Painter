@@ -5,7 +5,8 @@
 #include <cstdlib>
 
 //Mac
-#include <SDL2/SDL.h>
+#include <SDL.h>
+
 //Windows
  //#include <SDL.h>
 
