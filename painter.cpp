@@ -1,5 +1,6 @@
 #include "painter.h"
 #include <iostream>
+#include <SDL2/SDL.h>
 
 /***
     Args: color (SDL_Color): color value
@@ -11,7 +12,7 @@ void Painter::setColor(SDL_Color color)
 {
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
-    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+    SDL_SetRenderDrawColor(renderer, color);
 }
 
 
@@ -30,13 +31,6 @@ void Painter::jumpForward(int numPixel)
 }
 
 
-void Painter::setAngle(double angle) {
-    while (angle >= 360)
-    {
-        angle -= 360;
-    }
-    this->angle = angle;
-}
 
 /***
     Args: numPixel (int): number of pixel for jumping backward
@@ -88,7 +82,7 @@ void Painter::randomColor()
     Uint8 r = rand() % 256;
     Uint8 g = rand() % 256;
     Uint8 b = rand() % 256;
-    SDL_Color color = { r, g, b, 0 };
+    SDL_Color color = { r, g, b};
     setColor(color);
 }
 
