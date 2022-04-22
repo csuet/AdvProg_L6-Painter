@@ -1,5 +1,6 @@
 #include "painter.h"
 #include <iostream>
+
 /***
     Args: color (SDL_Color): color value
 
@@ -11,7 +12,6 @@ void Painter::setColor(SDL_Color color)
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
-
 }
 
 
@@ -28,6 +28,7 @@ void Painter::jumpForward(int numPixel)
     x += (int)(numPixel * cos(rad));
     y -= (int)(numPixel * sin(rad));
 }
+
 
 void Painter::setAngle(double angle) {
     while (angle >= 360)
@@ -58,7 +59,7 @@ void Painter::jumpBackward(int numPixel)
 ***/
 void Painter::turnLeft(double degree)
 {
-    // TODO: rotate left the painter 
+    // TODO: rotate left the painter   
     setAngle(getAngle() + degree);
 }
 
@@ -187,4 +188,3 @@ void Painter::moveBackward(int numPixel)
 {
     moveForward(-numPixel);
 }
-
