@@ -1,4 +1,6 @@
 #include "painter.h"
+#include<iostream>
+using namespace std;
 
 /***
     Args: color (SDL_Color): color value 
@@ -83,7 +85,7 @@ void Painter::randomColor()
     Uint8 g = rand() % 256;
     Uint8 b = rand() % 256;
     SDL_Color color = {r,g,b};
-    painter.setColor(color);
+    Painter.setColor(color);
 }
 
 
