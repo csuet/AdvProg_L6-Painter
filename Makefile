@@ -7,7 +7,6 @@ all:
 	g++ -std=c++17 utils.o  painter.o main.o -o main $(LIBFLAGS)
 	g++ -std=c++17 -c painterTest.cpp $(LIBFLAGS)
 	g++ -std=c++17 utils.o  painter.o painterTest.o  -lcppunit -o painterTest $(LIBFLAGS)
-	g++ -Isrc/Include -Lsrc/lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2
 run:
 	chmod +x main
 	./main
