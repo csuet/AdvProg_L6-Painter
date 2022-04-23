@@ -2,7 +2,7 @@
 #include <ctime>
 
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include "painter.h"
 #include "utils.h"
@@ -14,7 +14,7 @@ using std:: endl;
 int main(int argc, char* argv[])
 {
 	srand(time(NULL));
-	
+
 	int figNumber = 0;
 	if (argc == 2) figNumber = atoi(argv[1]) % 15;
 	SDL_Window *window;
@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Eight lines crossing at center*/
 	//*
 	case 6:
@@ -144,7 +144,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Circles in line */
 	//*
 	case 8:
@@ -156,7 +156,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Circles in circle */
 	//*
 	case 9:
@@ -196,7 +196,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Pattern of Ten parallelograms */
 	//*
 	case 12:
