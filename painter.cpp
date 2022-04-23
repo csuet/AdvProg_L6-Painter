@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include "painter.h"
 #include <cmath>
 
@@ -23,7 +23,7 @@ void Painter::setColor(SDL_Color color)
 void Painter::jumpForward(int numPixel)
 {
     this->x += numPixel * cos(this->angle);
-    this->y += numPixel * sin(this->angle);    
+    this->y += numPixel * sin(this->angle);
 }
 
 
