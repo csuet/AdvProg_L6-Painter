@@ -22,7 +22,7 @@ const SDL_Color GREEN_COLOR = {0, 128, 0};
 
 const SDL_Color DEFAULT_COLOR = BLACK_COLOR;
 
-/***
+/***z
    An Implementation of Code.org Painter 
 ***/
 class Painter
