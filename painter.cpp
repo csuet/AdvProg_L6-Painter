@@ -1,4 +1,5 @@
 #include "painter.h"
+#include<SDL2/SDL.h>
 
 /***
     Args: color (SDL_Color): color value 
@@ -6,10 +7,10 @@
     Returns:
         None
 ***/
-void Painter::setColor(SDL_Color _color) 
+void Painter::setColor(SDL_Color color) 
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
-    color = _color;
+    SDL_SetRenderDrawColor(renderer,color);
 }
 
 
@@ -50,7 +51,7 @@ void Painter::jumpBackward(int numPixel)
 void Painter::turnLeft(double degree)
 {
     // TODO: rotate left the painter  
-	angle+=degree; 
+	setAngle(angle + degree);
 }
 
 
