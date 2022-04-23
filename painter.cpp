@@ -1,3 +1,4 @@
+#include <SDL.h>
 #include "painter.h"
 #include <cmath>
 /***
