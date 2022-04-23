@@ -1,5 +1,6 @@
 #include "painter.h"
 #include <cmath>
+#include <iostream>
 
 /***
     Args: color (SDL_Color): color value 
@@ -83,8 +84,8 @@ void Painter::randomColor()
     Uint8 g = rand()%260;
     Uint8 b = rand()%260;
 
-    SDL_Color color = {r, g, b};
-    setColor(color); 
+    this->color = {r, g, b};
+    //setColor(color); 
 }
 
 
