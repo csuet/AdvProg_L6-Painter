@@ -10,7 +10,7 @@
 #include "utils.h"
 
 using std::cout;
-using std:: endl;
+using std::endl;
 
 
 int main(int argc, char* argv[])
