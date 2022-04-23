@@ -3,9 +3,9 @@
 #include<cmath>
 
 //Mac
-#include <SDL2/SDL.h>
+//#include <SDL2/SDL.h>
 // //Windows
- //#include <SDL.h>
+ #include <SDL.h>
 
 #include "painter.h"
 #include "utils.h"
