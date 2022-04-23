@@ -1,4 +1,4 @@
-LIBFLAGS = -L lib -l mingw32 -l SDL2 -l SDL2_image -l SDL2main
+LIBFLAGS = -L lib -l SDL2 -l SDL2_image -l SDL2main
 INCLUDEFLAGS = -I include
 all:
 	g++ -std=c++17 $(INCLUDEFLAGS) -c utils.cpp $(LIBFLAGS)
