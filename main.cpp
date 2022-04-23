@@ -2,8 +2,7 @@
 #include <ctime>
 
 
-//Windows
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "painter.h"
 #include "utils.h"
