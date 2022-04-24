@@ -38,7 +38,7 @@ void Painter::jumpForward(int numPixel)
 void Painter::jumpBackward(int numPixel)
 {
     // TODO: jump the painter backward
-    jumpForward(-numPixel);
+    jumpBackward(-numPixel)
 }
 
 
