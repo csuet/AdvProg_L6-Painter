@@ -1,5 +1,5 @@
 #include "painter.h"
-
+#include <cmath>
 /***
     Args: color (SDL_Color): color value 
         
@@ -9,7 +9,7 @@
 void Painter::setColor(SDL_Color color) 
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
-    this -> color = color;
+    this->color = color;
     SDL_setRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 }
 
@@ -23,9 +23,9 @@ void Painter::setColor(SDL_Color color)
 void Painter::jumpForward(int numPixel)
 {
     // TODO: jump the painter forward
-    float rad = (angle /180) *M_PI;
-    x += numPixel * cos(rad);
-    y -= numPixel * sin(rad);
+    float rad = (this->angle /180) *M_PI;
+    this->x += numPixel * cos(rad);
+    this->y -= numPixel * sin(rad);
 }
 
 
@@ -52,8 +52,7 @@ void Painter::turnLeft(double degree)
 {
     // TODO: rotate left the painter
     //degree -= floor(degree / 360) * 360;
-    angle + = degree;
-    angle -= floor(angle /360) * 360;
+    this->angle -= degree*M_PI / 180;
 }
 
 
