@@ -1,5 +1,4 @@
 #include "painter.h"
-#include <SDL2/SDL.h>
 
 
 void Painter::setColor(SDL_Color color) 
