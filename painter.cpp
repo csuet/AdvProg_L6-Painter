@@ -38,7 +38,7 @@ void Painter::jumpForward(int numPixel)
 void Painter::jumpBackward(int numPixel)
 {
     // TODO: jump the painter backward
-    Painter.jumpForward(-numPixel);
+    this->jumpForward(-numPixel);
 }
 
 
@@ -65,7 +65,7 @@ void Painter::turnLeft(double degree)
 void Painter::turnRight(double degree)
 {
     // TODO: rotate right the painter   
-    Painter.turnLeft(-degree);
+    this->turnLeft(-degree);
 }
 
 /***  
