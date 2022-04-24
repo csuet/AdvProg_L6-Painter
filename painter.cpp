@@ -11,8 +11,13 @@ void Painter::setColor(SDL_Color color)
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 0);
 }
 
+void Painter::setAngle(float angle)
+{
+    this->angle = angle - floor(angle/360)*360;
+}
 
 /***
     Args: numPixel (int): number of pixel for jumping forward
