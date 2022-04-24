@@ -5,7 +5,7 @@
 void Painter::setColor(SDL_Color color) 
 { 
     this->color = color;
-    SDL_SetRenderDrawColor(renderer, color);
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, 0);
 }
 
 void Painter::jumpForward(int numPixel)
@@ -17,17 +17,18 @@ void Painter::jumpForward(int numPixel)
 
 void Painter::jumpBackward(int numPixel)
 {
-    jumpForward(- numPixel);
+    Painter.jumpForward(-numPixel);
 }
   
 void Painter::turnLeft(double degree)
 { 
-    setAngle(this->angle + degree); 
+    angle += degree;
+    angle -= floor(angle /360) *360; 
 }
 
 void Painter::turnRight(double degree)
 {
-    turnLeft(-degree);
+    Painter.turnLeft(-degree);
 }
 
 void Painter::randomColor()
