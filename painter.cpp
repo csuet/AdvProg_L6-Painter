@@ -24,10 +24,8 @@ void Painter::jumpForward(int numPixel)
 {
     // TODO: jump the painter forward
     float rad = (angle / 180) * M_PI;
-    int x_, y_;
-    x_ = (cos(rad) * numPixel) +this->getX();
-    y_ = (cos(rad) * numPixel) +this->getY();
-    this->setPosition(x_, y_);
+    x += (cos(rad) * numPixel) ;
+    y -= (sin(rad) * numPixel) ;
 }
 
 
@@ -53,7 +51,7 @@ void Painter::jumpBackward(int numPixel)
 void Painter::turnLeft(double degree)
 {
     // TODO: rotate left the painter   
-    this->setAngle(angle+degree);
+    setAngle(angle+degree);
 }
 
 
@@ -66,7 +64,7 @@ void Painter::turnLeft(double degree)
 void Painter::turnRight(double degree)
 {
     // TODO: rotate right the painter   
-    this->setAngle(angle-degree);
+    setAngle(angle-degree);
 }
 
 /***  
