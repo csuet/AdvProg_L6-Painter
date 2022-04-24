@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cmath>
 #include <cppunit/TestRunner.h>
 #include <cppunit/TestResult.h>
@@ -8,6 +7,7 @@
 #include <cppunit/extensions/TestFactoryRegistry.h>
 
 
+#include<iostream>
 #include "painter.h"
 #include "utils.h"
 
