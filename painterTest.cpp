@@ -10,7 +10,7 @@
 
 #include "painter.h"
 #include "utils.h"
-
+using namespace std;
 struct TestStruct {
     std::string testName;
     bool expected;
