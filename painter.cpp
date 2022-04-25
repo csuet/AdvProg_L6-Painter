@@ -84,6 +84,7 @@ void Painter::randomColor()
     Uint8 g = rand()%255;
     Uint8 b = rand()%255;
     SDL_Color color = {r,g,b};
+    setColor(color);
 }
 
 
