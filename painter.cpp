@@ -1,5 +1,4 @@
 #include "painter.h"
-#include <iostream>
 #include <cmath>
 
 /***
