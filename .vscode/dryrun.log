@@ -1,0 +1,10 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory `c:/Users/Vu Thi Thanh VINH/Desktop/AdvProg_L6-Painter'
+g++ -std=c++17 -Isrc/include -Lsrc/lib -c utils.cpp -lmingw32 -lSDL2 -lSDL2_image
+g++ -std=c++17 -Isrc/include -Lsrc/lib -c painter.cpp -lmingw32 -lSDL2 -lSDL2_image
+g++ -std=c++17 -Isrc/include -Lsrc/lib -c main.cpp -lmingw32 -lSDL2 -lSDL2_image
+g++ -std=c++17 -Isrc/include -Lsrc/lib utils.o  painter.o main.o -o main -lmingw32 -lSDL2 -lSDL2_image
+g++ -std=c++17 -Isrc/include -Lsrc/lib -c painterTest.cpp -lmingw32 -lSDL2 -lSDL2_image
+g++ -std=c++17 -Isrc/include -Lsrc/lib utils.o  painter.o painterTest.o  -lcppunit -o painterTest -lmingw32 -lSDL2 -lSDL2_image
+make.exe: Leaving directory `c:/Users/Vu Thi Thanh VINH/Desktop/AdvProg_L6-Painter'
+ 

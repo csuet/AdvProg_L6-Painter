@@ -1,0 +1,330 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-pc-mingw32
+ 
+
+# Make data base, printed on Mon Apr 25 22:30:59 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile
+CURDIR := c:/Users/Vu Thi Thanh VINH/Desktop/AdvProg_L6-Painter
+# default
+SHELL := sh.exe
+# environ 
+ment
+CLION = C:\Program Files\JetBrains\CLion 2021.3.3\bin;
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\Vu Thi Thanh VINH\OneDrive
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from `makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+TMP = C:\Users\VUTHIT~1\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-62b7d278-ed46-4ac7-a5dd-168c0580089c-sock
+# environment
+VSCODE_CWD = C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code
+# environment
+PATH = C:\Users\Vu Thi Thanh VINH\Documents\save vscode\library\mingw64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\Vu Thi Thanh VINH\Desktop\cmake-3.23.0-rc4-windows-x86_64\cmake-3.23.0-rc4-windows-x86_64\bin;C:\Program Files\dotnet\;C:\Users\Vu Thi Thanh VINH\Documents\save vscode\library\mingw64\bin;C:\Users\Vu Thi Thanh VINH\AppData\Local\Microsoft\WindowsApps;C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\CLion 2021.3.3\bin;;
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\Vu Thi Thanh VINH
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# makefile (from `makefile', line 1)
+LIBFLAGS = -lmingw32 -lSDL2 -lSDL2_image
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_4556_TEXJFGVWRCPFWWLG
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = DESKTOP-D3RJER2
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Vu Thi Thanh VINH
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Vu Thi Thanh VINH\AppData\Roaming\Code\CachedData\dfd34e8260c270da74b5c2d86d61aee4b6d56977
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\DESKTOP-D3RJER2
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = DESKTOP-D3RJER2
+# environment
+MAKE = C:\Program Files(x86)\GnuWin32\bin\make.exe
+# default
+MAKECMDGOALS := all
+# default
+MAKE_VERSION := 3.81
+# makefile
+.DEFAULT_GOAL := all
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LOCALAPPDATA = C:\Users\Vu Thi Thanh VINH\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\d220ffe9727b2e539d26adc7b7a10f59-1.66.2-main-sock
+# environment
+HOMEPATH = \Users\Vu Thi Thanh VINH
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+SYSTEMROOT = C:\Windows
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# autom 
+atic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Vu Thi Thanh VINH\AppData\Roaming
+# environment
+TEMP = C:\Users\VUTHIT~1\AppData\Local\Temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = 6801
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 23
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 4556
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-D3RJER2
+# variable set hash-table stats:
+# Load=90/1024=9%, Rehash=0, Collisions=9/119=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# : could not be stat'd.
+# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622173337): 30 files, no impossibilities.
+# C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1647115794): 154 files, no impossibilities.
+# . (key c:/Users/Vu Thi Thanh VINH/Desktop/AdvProg_L6-Painter, mtime 1650900658): 17 files, no impossibilities.
+# C:\Users\Vu Thi Thanh VINH\Documents\save vscode\library\mingw64\bin (key C:/Users/Vu Thi Thanh VINH/Documents/save vscode/library/mingw64/bin, mtime 1521554570): 59 files, no impossibilities.
+# C:\Users\Vu Thi Thanh VINH\AppData\Local\Microsoft\WindowsApps (key C:/Users/Vu Thi Thanh VIN 
+H/AppData/Local/Microsoft/WindowsApps, mtime 1649921178): 17 files, no impossibilities.
+# C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1649670165): 8 files, no impossibilities.
+# C:\Program Files\JetBrains\CLion 2021.3.3\bin (key C:/Program Files/JetBrains/CLion 2021.3.3/bin, mtime 1646310710): 37 files, no impossibilities.
+# C:\Windows\System32\OpenSSH\: could not be stat'd.
+# C:\Windows (key C:/Windows, mtime 1650435717): 109 files, no impossibilities.
+# C:\Users\Vu Thi Thanh VINH\Desktop\cmake-3.23.0-rc4-windows-x86_64\cmake-3.23.0-rc4-windows-x86_64\bin (key C:/Users/Vu Thi Thanh VINH/Desktop/cmake-3.23.0-rc4-windows-x86_64/cmake-3.23.0-rc4-windows-x86_64/bin, mtime 1647608466): 7 files, no impossibilities.
+# C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1645760856): 8 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1650873004): 2850 files, no impossibilities.
+# C:\Program Files (x86)\Dev-Cpp\MinGW64\bin (key C:/Program Files (x86)/Dev-Cpp/MinGW64/bin, mtime 1633234903): 63 files, no impossibilities.
+# C:\Users\Vu Thi Thanh VINH\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Vu Thi Thanh VINH/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1650384535): 4 files, no impossibilities.
+# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1647744841): 5 files, no impossibilities.
+
+# 3368 files, no impossibilities in 16 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all:
+#  Command-lin 
+e target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  commands to execute (from `makefile', line 3):
+	g++ -std=c++17 -Isrc/include -Lsrc/lib -c utils.cpp $(LIBFLAGS)
+	g++ -std=c++17 -Isrc/include -Lsrc/lib -c painter.cpp $(LIBFLAGS)
+	g++ -std=c++17 -Isrc/include -Lsrc/lib -c main.cpp $(LIBFLAGS)
+	g++ -std=c++17 -Isrc/include -Lsrc/lib utils.o  painter.o main.o -o main $(LIBFLAGS)
+	g++ -std=c++17 -Isrc/include -Lsrc/lib -c painterTest.cpp $(LIBFLAGS)
+	g++ -std=c++17 -Isrc/include -Lsrc/lib utils.o  painter.o painterTest.o  -lcppunit -o painterTest $(LIBFLAGS)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 14):
+	chmod +x guessitTest
+	./guessitTest
+	
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 22:12:34
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  
+ Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 10):
+	chmod +x main
+	./main
+	
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 18):
+	rm -rf *.o main painterTest
+	
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/20=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Mon Apr 25 22:30:59 2022
+
+ 
