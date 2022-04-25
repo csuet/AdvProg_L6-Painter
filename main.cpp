@@ -16,7 +16,7 @@ using std:: endl;
 int main(int argc, char* argv[])
 {
 	srand(time(NULL));
-	
+
 	int figNumber = 0;
 	if (argc == 2) figNumber = atoi(argv[1]) % 15;
 	SDL_Window *window;
@@ -121,7 +121,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Eight lines crossing at center*/
 	//*
 	case 6:
@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Circles in line */
 	//*
 	case 8:
@@ -158,7 +158,7 @@ int main(int argc, char* argv[])
 		}
 		break;
 	//*/
-	
+
 	/* Circles in circle */
 	//*
 	case 9:
@@ -197,10 +197,7 @@ int main(int argc, char* argv[])
 			painter.turnRight(4);
 		}
 		break;
-	//*/
-	
-	/* Pattern of Ten parallelograms */
-	//*
+
 	case 12:
 		painter.setColor(WHITE_COLOR);
 		for (int i = 0; i < 10; ++i) {
@@ -208,10 +205,7 @@ int main(int argc, char* argv[])
 			painter.turnRight(36);
 		}
 		break;
-	//*/
 
-	/* Five and five cirles */
-	//*
 	case 13:
 		painter.setColor(WHITE_COLOR);
 		painter.clearWithBgColor(GREEN_COLOR);
@@ -221,10 +215,7 @@ int main(int argc, char* argv[])
 			painter.turnRight(72);
 		}
 		break;
-	//*/
 
-	/* Snow flake*/
-	//*
 	case 14: {
 		painter.setColor(WHITE_COLOR);
 		for (int i = 0; i < 8; ++i) {
@@ -245,7 +236,7 @@ int main(int argc, char* argv[])
 		}
 		break; }
 	}
-	//*/
+
 
 	SDL_RenderPresent(renderer);
 	waitUntilKeyPressed();
