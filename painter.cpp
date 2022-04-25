@@ -1,5 +1,7 @@
 #include "painter.h"
+#include <iostream>
 
+using namespace std;
 /***
     Args: color (SDL_Color): color value 
         

@@ -3,6 +3,9 @@
 
 #include <cmath>
 #include <cstdlib>
+#include<iostream>
+
+using namespace std;
 
 //Mac
 #include <SDL.h>
