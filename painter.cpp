@@ -31,15 +31,6 @@ void Painter::jumpForward(int numPixel)
     y -= (int)(numPixel * sin(rad));
 }
 
-void Painter::setAngle(double angle) {
-    while (angle >= 360)
-    {
-        angle -= 360;
-    }
-    this->angle = angle;
-}
-
-
 /***
     Args: numPixel (int): number of pixel for jumping backward
         
@@ -49,7 +40,7 @@ void Painter::setAngle(double angle) {
 void Painter::jumpBackward(int numPixel)
 {
     // TODO: jump the painter backward
-	 jumpForward(-numPixel);
+	painter.jumpForward( - numPixel );
 }
 
 
@@ -62,7 +53,8 @@ void Painter::jumpBackward(int numPixel)
 void Painter::turnLeft(double degree)
 {
     // TODO: rotate left the painter  
-	 setAngle(getAngle() + degree);
+	angle + = degree;
+    angle -= floor(angle /360) * 360;
 	
 }
 
@@ -76,7 +68,7 @@ void Painter::turnLeft(double degree)
 void Painter::turnRight(double degree)
 {
     // TODO: rotate right the painter   
-	 turnLeft(-degree);
+	painter.turnLeft(-degree);
 }
 
 /***  
@@ -91,8 +83,8 @@ void Painter::randomColor()
 	Uint8 r = rand() % 256;
     Uint8 g = rand() % 256;
     Uint8 b = rand() % 256;
-    SDL_Color color = { r, g, b, 0 };
-    setColor(color);
+    SDL_Color color = {r,g,b};
+    painter.setColor(color);
 }
 
 
