@@ -10,7 +10,7 @@ void Painter::setColor(SDL_Color color)
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
-    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, 0);
+    SDL_SetRenderDrawColor(renderer,color.r, color.g, color.b, color.a);
 }
 
 
@@ -23,7 +23,7 @@ void Painter::setColor(SDL_Color color)
 void Painter::jumpForward(int numPixel)
 {
     // TODO: jump the painter forward
-    float rad = (angle/180)*3.14;
+    float rad = (angle/180)*M_PI;
     x+= cos(rad) * numPixel;
     y-= sin(rad) * numPixel;
 }
