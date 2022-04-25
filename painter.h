@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include <cstdlib>
-
+#include<SDL.h>
 //Mac
 #include <SDL2/SDL.h>
 //Windows
