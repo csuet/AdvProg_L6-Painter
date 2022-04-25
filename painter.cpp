@@ -1,4 +1,3 @@
-#include <iostream>
 #include "painter.h"
 
 /***
@@ -11,7 +10,6 @@ void Painter::setColor(SDL_Color color)
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
-    SDL_SetRenderDrawColor(render, color.r, color.g, color.b, 0);
 }
 
 

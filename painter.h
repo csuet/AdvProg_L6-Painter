@@ -1,6 +1,7 @@
 #ifndef PAINTER_H
 #define PAINTER_H
 
+#include <iostream>
 #include <cmath>
 #include <cstdlib>
 
