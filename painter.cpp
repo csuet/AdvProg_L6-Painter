@@ -51,7 +51,7 @@ void Painter::turnLeft(double degree)
     angle -= floor(angle /360) * 360;
 }
 
-::turnRight(double degree)
+void Painter::turnRight(double degree)
 {
     turnLeft(-degree);
 }
