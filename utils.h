@@ -2,6 +2,7 @@
 #define UTILS_H
 
 #include <iostream>
+// #include <SDL2/SDL.h>
 #include <SDL.h>
 
 const int SCREEN_WIDTH  = 800;
