@@ -76,10 +76,10 @@ void Painter::turnRight(double degree)
 void Painter::randomColor()
 {
     // TODO: set random color
-    Uint8 a = rand() % 256;
+    Uint8 r = rand() % 256;
+    Uint8 g = rand() % 256;
     Uint8 b = rand() % 256;
-    Uint8 c = rand() % 256;
-    SDL_Color color = {a, b, c};
+    SDL_Color color = {r, g, b};
     Painter.setColor(color);
 }
 
