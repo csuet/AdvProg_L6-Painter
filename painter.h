@@ -5,9 +5,9 @@
 #include <cstdlib>
 
 //Mac
-#include <SDL2/SDL.h>
+//#include <SDL2/SDL.h>
 //Windows
-// #include <SDL.h>
+#include <SDL.h>
 
 const SDL_Color CYAN_COLOR = {0, 255, 255};
 const SDL_Color BLUE_COLOR = {0, 0, 255};
@@ -43,7 +43,7 @@ class Painter
         int getX() { return x; }
         int getY() { return y; }
         SDL_Renderer* getRenderer() { return this->renderer; }
-        void setAngle(double angle) { this->angle = angle; }
+        void setAngle(double angle);
         double getAngle() { return angle; }
         int getWidth() { return width; }
         int getHeight() { return height; }
