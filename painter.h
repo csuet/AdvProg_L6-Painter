@@ -5,8 +5,10 @@
 #include <cstdlib>
 
 //Mac
+
 #include <SDL.h>
 //Windows
+
 // #include <SDL.h>
 
 const SDL_Color CYAN_COLOR = {0, 255, 255};
