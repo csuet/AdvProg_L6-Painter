@@ -80,6 +80,7 @@ void Painter::randomColor()
     Unit8 g = rand() % 255;
     Unit8 b = rand() % 255;
     SDL_Color color = { r,g,b };
+    setColor(color);
 }
 
 
