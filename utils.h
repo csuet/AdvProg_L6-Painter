@@ -2,10 +2,10 @@
 #define UTILS_H
 
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 const int SCREEN_WIDTH  = 800;
-const int SCREEN_HEIGHT = 600; 
+const int SCREEN_HEIGHT = 600;
 
 const std::string WINDOW_TITLE = "An Implementation of Code.org Painter";
 
