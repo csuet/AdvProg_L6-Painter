@@ -9,6 +9,8 @@
 //Windows
 // #include <SDL.h>
 
+using namespace std;
+
 const SDL_Color CYAN_COLOR = {0, 255, 255};
 const SDL_Color BLUE_COLOR = {0, 0, 255};
 const SDL_Color ORANGE_COLOR = {255, 165, 0};

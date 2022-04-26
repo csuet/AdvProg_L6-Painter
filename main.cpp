@@ -9,8 +9,7 @@
 #include "painter.h"
 #include "utils.h"
 
-using std::cout;
-using std:: endl;
+using namespace std;
 
 
 int main(int argc, char* argv[])
