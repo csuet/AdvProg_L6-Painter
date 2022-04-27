@@ -1,5 +1,5 @@
 #include "painter.h"
-
+#include "utils.h"
 /***
     Args: color (SDL_Color): color value
 
