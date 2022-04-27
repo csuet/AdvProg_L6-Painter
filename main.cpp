@@ -2,7 +2,7 @@
 #include <ctime>
 
 //Mac
-#include <SDL2/SDL.h>
+#include "include/SDL2/SDL.h"
 // //Windows
 // #include <SDL.h>
 
