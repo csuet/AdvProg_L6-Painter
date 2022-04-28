@@ -1,7 +1,6 @@
 #include <iostream>
 #include <ctime>
 
-// //Windows
 #include "SDL.h"
 
 #include "painter.h"
