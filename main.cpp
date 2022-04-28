@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 
-#include <SDL.h>
+#include<SDL2/SDL.h>
 
 #include "painter.h"
 #include "utils.h"
