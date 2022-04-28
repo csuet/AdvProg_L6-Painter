@@ -10,6 +10,8 @@
 
 #include "painter.h"
 #include "utils.h"
+#include<iostream>
+using namespace std;
 
 struct TestStruct {
     std::string testName;
