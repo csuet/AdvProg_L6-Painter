@@ -1,10 +1,13 @@
 #include "painter.h"
+#include "utils.h"
+#include<iostream>
+using namespace std;
 
 /***
     Args: color (SDL_Color): color value 
         
     Returns:
-        None
+        None~
 ***/
 void Painter::setColor(SDL_Color color) 
 { 
