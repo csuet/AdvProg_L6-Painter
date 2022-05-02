@@ -16,6 +16,8 @@ jobs:
         run: sudo apt-get update
       - name: install cppunit
         run: sudo apt install -y libcppunit-dev
+      - name: install sdl2
+        run: sudo apt-get install libsdl2-dev
       - name: configure privelige
         run: chmod +x configure
       - name: configure
