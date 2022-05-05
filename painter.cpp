@@ -33,7 +33,6 @@ void Painter::turnRight(double degree)
     // TODO: rotate right the painter
 	painter.turnLeft(-degree);
 }
-
 void Painter::randomColor()
 {
     // TODO: set random color
