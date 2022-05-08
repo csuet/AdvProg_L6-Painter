@@ -7,6 +7,7 @@
 #include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/extensions/TestFactoryRegistry.h>
 
+using namespace std;
 
 #include "painter.h"
 #include "utils.h"
@@ -20,7 +21,7 @@ struct TestStruct {
 
 bool verifySetColor(SDL_Color color) { 
     SDL_Window *window;
-    SDL_Renderer *renderer;
+    SDL_Renderer *renderer; 
     SDL_Color color1 = {0, 0, 0};
     initSDL(&window, &renderer);
     Painter painter(window, renderer);
