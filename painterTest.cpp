@@ -7,9 +7,10 @@
 #include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/extensions/TestFactoryRegistry.h>
 
-
+#include<iostream>
 #include "painter.h"
 #include "utils.h"
+using namespace std;
 
 struct TestStruct {
     std::string testName;
