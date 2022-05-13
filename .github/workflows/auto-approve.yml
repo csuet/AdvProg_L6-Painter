@@ -10,5 +10,5 @@ jobs:
         uses: mheap/automatic-approve-action@v1
         with:
           token: ${{ secrets.PAT }}
-          workflows: "action.yml"
+          workflows: "actions.yml"
           dangerous_files: "painterTest.cpp"
