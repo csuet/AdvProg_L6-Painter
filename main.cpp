@@ -1,259 +1,144 @@
-#include <iostream>
-#include <ctime>
+//#include <iostream>
+//#include <math.h>
+//using namespace std;
+//
+////Sinh viên viết code vào đây
+//
+//struct Point{
+//    Point(){};
+//    Point(int x, int y) : x(x), y(y){};
+//    int x, y;
+//};
+//
+//class Triangle{
+// public:
+//    Point p1,p2,p3;
+//    Triangle(Point p1, Point p2, Point p3){
+//        this->p1.x = p1.x;
+//        this->p1.y = p1.y;
+//        this->p2.x = p2.x;
+//        this->p2.y = p2.y;
+//        this->p3.x = p3.x;
+//        this->p3.y = p3.y;
+//    }
+//    double sumDistance(Point p){
+//        double d1 = 0, d2 = 0, d3 = 0;
+//        d1 = sqrt((p.x - p1.x) * (p.x - p1.x) + (p.y - p1.y) * (p.y - p1.y));
+//        d2 = sqrt((p.x - p2.x) * (p.x - p2.x) + (p.y - p2.y) * (p.y - p2.y));
+//        d3 = sqrt((p.x - p3.x) * (p.x - p3.x) + (p.y - p3.y) * (p.y - p3.y));
+//        return d1 + d2 + d3;
+//    }
+//};
+//
+//
+//int main(){
+//    // CHÚ Ý: Sinh viên không được thay đổi nội dung hàm main
+//    // Chương trình thay đổi hàm main sẽ không được tính điểm dù đúng tất cả các test
+//    int x1, y1, x2, y2, x3, y3, x, y;
+//    cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x >> y;
+//
+//    Point p1(x1, y1);
+//    Point p2(x2, y2);
+//    Point p3(x3, y3);
+//    Triangle t(p1, p2, p3);
+//
+//    Point p(x,y);
+//
+//    cout << t.sumDistance(p) << endl;
+//
+//    return 0;
+//}
 
-//Mac
-//#include <SDL2/SDL.h>
-// //Windows
-#include <SDL.h>
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int main(){
+//    string path;
+//    cin >> path;
+//    ifstream file(path);
+//    while(file && !file.eof()) {
+//        int n;
+//        file >> n;
+//        file.ignore();
+//        while(n--) {
+//            int cnt = 0;
+//            string s;
+//            getline(file, s);
+//            stringstream ss(s);
+//            while (ss >> s) {
+//                if (s.size() < 2)
+//                    continue;
+//                else {
+//                    if (s[0] >= 'A' && s[0] <= 'Z')
+//                        cnt++;
+//                }
+//            }
+//            cout << cnt << '\n';
+//        }
+//    }
+//    return 0;
+//}
 
-#include "painter.h"
-#include "utils.h"
+//struct Time {
+//    // your code goes here
+//    // Cac bien thanh vien
+//
+//    int h,m,s;
+//
+//    // your code goes here
+//    // Hai ham khoi tao
+//
+//    Time(): h(0), m(0), s(0) {}
+//    Time(int h, int m, int s): h(h), m(m), s(s) {}
+//
+//    int second() {
+//        // your code goes here
+//        return s + m * 60 + h * 3600;
+//    }
+//
+//    void print() {
+//        if(h < 10) cout << 0;
+//        cout << h << ":";
+//        if(m < 10) cout << 0;
+//        cout << m << ":";
+//        if(s < 10) cout << 0;
+//        cout << s << '\n';
+//        // your code goes here
+//    }
+//};
+//
+//Time normalize(int h, int m, int s) {
+//    // your code goes here
+//    if(s >= 60) {
+//        m += s/60;
+//        s %= 60;
+//    }
+//
+//    if(m >= 60) {
+//        h += m/60;
+//        m %= 60;
+//    }
+//
+//    Time time(h, m, s);
+//    return time;
+//}
 
-using std::cout;
-using std:: endl;
-
-
-int main(int argc, char* argv[])
-{
-	srand(time(NULL));
-	
-	int figNumber = 0;
-	if (argc == 2) figNumber = atoi(argv[1]) % 15;
-	SDL_Window *window;
-	SDL_Renderer *renderer;
-
-	initSDL(&window, &renderer);
-
-    //cout << "An Implementation of Code.org Painter" << endl;
-
-	Painter painter(window, renderer);
-
-	switch (figNumber) {
-
-	/*
-    cout << "Width: " << painter.getWidth() << " , Height: " << painter.getHeight() << endl;
-    cout << "X: " << painter.getX() << " , Y: " << painter.getY() << endl;
-	//*/
-	/* Square */
-	//*
-	case 0:
-		painter.setColor(WHITE_COLOR);
-		for (int i = 0; i < 4; ++i) {
-			painter.moveForward(100);
-			painter.turnRight(90);
-		}
-		break;
-	//*/
-
-	/* Triangle */
-	//*
-	case 1:
-		painter.setColor(WHITE_COLOR);
-		painter.clearWithBgColor(GREEN_COLOR);
-		for (int i = 0; i < 3; ++i) {
-			painter.turnLeft(120);
-			painter.moveForward(100);
-		}
-		break;
-	//*/
-
-	/* Filled Triangle */
-	//*
-	case 2: {
-		int curX = painter.getX();
-		int curY = painter.getY();
-		painter.setColor(WHITE_COLOR);
-		painter.turnLeft(60);
-		int size = 150;
-		for (int i = 0; i < size; ++i) {
-			for (int j = 0; j < 3; ++j) {
-				painter.turnLeft(120);
-				painter.moveForward(size - i);
-			}
-			painter.setPosition(curX, curY);
-			painter.jumpBackward(i+1);
-		}
-		painter.setPosition(curX, curY);
-		break; }
-	//*/
-
-
-	/* Octagon */
-	//*
-	case 3:
-		painter.setPosition(350, 500);
-		painter.setColor(YELLOW_COLOR);
-		for (int i = 0; i < 8; ++i) {
-			painter.moveForward(150);
-			painter.turnLeft(45);
-		}
-		break;
-	//*/
-
-	/* Star of fives */
-	//*
-	case 4:
-		painter.setPosition(350, 200);
-		painter.setColor(YELLOW_COLOR);
-		for (int i = 0; i < 5; ++i) {
-			painter.moveForward(200);
-			painter.turnRight(144);
-		}
-		break;
-	//*/
-
-	/* Star of David */
-	//*
-	case 5:
-		painter.setPosition(350, 400);
-		painter.setColor(YELLOW_COLOR);
-		painter.turnLeft(60);
-		for (int i = 0; i < 3; ++i) {
-			painter.moveForward(150);
-			painter.turnLeft(120);
-		}
-		painter.turnLeft(30);
-		painter.jumpForward((int) (150 * 2 / 1.73205080757)); // sqrt(3) = 1.73205080757
-		painter.turnLeft(150);
-		for (int i = 0; i < 3; ++i) {
-			painter.moveForward(150);
-			painter.turnLeft(120);
-		}
-		break;
-	//*/
-	
-	/* Eight lines crossing at center*/
-	//*
-	case 6:
-		painter.setColor(WHITE_COLOR);
-		for (int i = 0; i < 8; ++i) {
-			painter.moveForward(100);
-			painter.moveBackward(100);
-			painter.turnLeft(45);
-		}
-		break;
-	//*/
-
-	/* Six squares */
-	//*
-	case 7:
-		for (int i = 0; i < 6; ++i) {
-			for (int j = 0; j < 4; ++j) {
-				painter.moveForward(100);
-				painter.turnRight(90);
-			}
-			painter.turnLeft(60);
-		}
-		break;
-	//*/
-	
-	/* Circles in line */
-	//*
-	case 8:
-		painter.setColor(RED_COLOR);
-		painter.setPosition(150, 150);
-		for (int i = 0; i < 10; ++i) {
-			painter.createCircle(100);
-			painter.jumpForward(30);
-		}
-		break;
-	//*/
-	
-	/* Circles in circle */
-	//*
-	case 9:
-		painter.setPosition(350, 150);
-		painter.clearWithBgColor(BLACK_COLOR);
-		for (int i = 0; i < 20; ++i) {
-			painter.randomColor();
-			painter.createCircle(100);
-			painter.jumpForward(1);
-			painter.createCircle(100);
-			painter.jumpForward(50);
-			painter.turnRight(18);
-		}
-		break;
-	//*/
-
-	/*	Ten squares in circle */
-	//*
-	case 10:
-		painter.setColor(WHITE_COLOR);
-		for (int i = 0; i < 10; ++i) {
-			//painter.randomColor();
-			painter.createSquare(100);
-			painter.turnRight(36);
-		}
-		break;
-	//*/
-
-	/* Multitude lines in cicles */
-	//*
-	case 11:
-		for (int i = 0; i < 90; ++i) {
-			painter.randomColor();
-			painter.moveForward(150);
-			painter.jumpBackward(150);
-			painter.turnRight(4);
-		}
-		break;
-	//*/
-	
-	/* Pattern of Ten parallelograms */
-	//*
-	case 12:
-		painter.setColor(WHITE_COLOR);
-		for (int i = 0; i < 10; ++i) {
-			painter.createParallelogram(100);
-			painter.turnRight(36);
-		}
-		break;
-	//*/
-
-	/* Five and five cirles */
-	//*
-	case 13:
-		painter.setColor(WHITE_COLOR);
-		painter.clearWithBgColor(GREEN_COLOR);
-		for (int i = 0; i < 5; ++i) {
-			painter.createCircle(100);
-			painter.createCircle(50);
-			painter.turnRight(72);
-		}
-		break;
-	//*/
-
-	/* Snow flake*/
-	//*
-	case 14: {
-		painter.setColor(WHITE_COLOR);
-		for (int i = 0; i < 8; ++i) {
-			int size = 40;
-			painter.moveForward(size);
-			for (int j = 0; j < 3; ++j) {
-				painter.turnLeft(45);
-				painter.moveForward(size);
-				painter.jumpBackward(size);
-				painter.turnRight(90);
-				painter.moveForward(size);
-				painter.jumpBackward(size);
-				painter.turnLeft(45);
-				painter.moveForward(size);
-			}
-			painter.jumpBackward(4*size);
-			painter.turnRight(45);
-		}
-		break; }
-	}
-	//*/
-
-	SDL_RenderPresent(renderer);
-	waitUntilKeyPressed();
-
-	quitSDL(&window, &renderer);
-
-	return 0;
-}
-
-
-
+//void printLast(Node* head, int k) {
+//    int size = 1;
+//    if (head){
+//        Node* nextNode = head->next;
+//        while(nextNode) {
+//            size++;
+//            nextNode = nextNode->next;
+//        }
+//
+//        nextNode = head;
+//        for(int i = 0; i < size; i++) {
+//            if(i >= size - k) {
+//                cout << nextNode->value << ' ';
+//            }
+//            nextNode = nextNode->next;
+//        }
+//    }
+//}

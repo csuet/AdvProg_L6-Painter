@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652764130 source:d:\ltnc\test\main.cpp
+	<iostream>
+	<math.h>
+
