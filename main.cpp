@@ -2,15 +2,14 @@
 #include <ctime>
 
 //Mac
-#include <SDL2/SDL.h>
+// #include <SDL2/SDL.h>
 // //Windows
-// #include <SDL.h>
+#include <SDL.h>
 
 #include "painter.h"
 #include "utils.h"
 
-using std::cout;
-using std:: endl;
+using namespace std;
 
 
 int main(int argc, char* argv[])
