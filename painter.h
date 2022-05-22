@@ -3,9 +3,12 @@
 
 #include <cmath>
 #include <cstdlib>
+#include<iostream>
+
+using namespace std;
 
 //Mac
-#include <SDL2/SDL.h>
+#include <SDL.h>
 //Windows
 // #include <SDL.h>
 
