@@ -198,11 +198,13 @@ protected:
         },
         {
             sharedName + "test normal 3", 
+            // Should be 30, 60, 90, 90, 15, -26 (30 * sin(60) = -25.98 ~ -26)
             verifyJumpForward(30, 60, 90, 90, 15, -25), 
             "Jumping to wrong postion."
         },
         {
             sharedName + "test normal 4", 
+            // Should be 50, 120, 90, 90, -25, -43 (50 * cos(120) = -25)
             verifyJumpForward(50, 120, 90, 90, -24, -43), 
             "Jumping to wrong postion."
         },

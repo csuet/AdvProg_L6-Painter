@@ -1,0 +1,13 @@
+
+#  Ignore no ext files
+*
+!*/
+!*.*
+
+
+.vscode/
+
+# Executable
+*.o
+*.exe
+*.out
