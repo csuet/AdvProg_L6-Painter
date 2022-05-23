@@ -8,6 +8,7 @@
 
 #include "painter.h"
 #include "utils.h"
+#include<cmath>
 
 using std::cout;
 using std:: endl;
