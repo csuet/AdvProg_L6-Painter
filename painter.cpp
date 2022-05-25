@@ -1,5 +1,4 @@
 #include "painter.h"
-#include <SDL2/SDL.h>
 
 /***
     Args: color (SDL_Color): color value 
@@ -10,7 +9,8 @@
 void Painter::setColor(SDL_Color color) 
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
-    SDL_SetRenderDrawColor(renderer,color);
+    this -> color = color;
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 }
 
 
@@ -64,7 +64,7 @@ void Painter::turnLeft(double degree)
 void Painter::turnRight(double degree)
 {
     // TODO: rotate right the painter   
-    turnLeft(-degree);
+    painter.turnLeft(-degree);
 }
 
 /***  
@@ -80,7 +80,7 @@ void Painter::randomColor()
     Uint8 g = rand() % 256;
     Uint8 b = rand () % 256;
     SDL_Color  color = {r, g, b};
-    setColor(color);  
+    painter.setColor(color);
 }
 
 
