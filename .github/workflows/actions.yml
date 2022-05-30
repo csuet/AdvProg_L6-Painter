@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: update
         run: sudo apt-get update
-      - name: install cppunit
-        run: sudo apt install -y libcppunit-dev
+      - name: install dependencies
+        run: sudo apt install -y libcppunit-dev libsdl2-dev
       - name: configure privelige
         run: chmod +x configure
       - name: configure
