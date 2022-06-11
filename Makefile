@@ -1,4 +1,4 @@
-LIBFLAGS = -lSDL2 -lSDL2_image
+LIBFLAGS = -lSDL2main -lSDL2
 all:
 	g++ -std=c++17 -c utils.cpp $(LIBFLAGS)
 	g++ -std=c++17 -c painter.cpp $(LIBFLAGS)
@@ -11,8 +11,8 @@ run:
 	./main
 
 test:
-	chmod +x guessitTest
-	./guessitTest
+	chmod +x painterTest
+	./painterTest
 
 clean:
 	rm -rf *.o main painterTest
