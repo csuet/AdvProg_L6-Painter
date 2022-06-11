@@ -1,5 +1,5 @@
 #include "utils.h"
-
+#include <SDL2/SDL.h>
 SDL_Color dict2SDL_Color(int r, int g, int b) {
 	SDL_Color color;
 	color.r = r;
